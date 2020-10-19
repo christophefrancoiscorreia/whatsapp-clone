@@ -18,9 +18,9 @@ export default function Sidebar({ id }) {
         setModalOpen(false)
         //createContact(idRef.current.value, nameRef.current.value)
     }
-
+ 
     return (
-        <div style={{width: 250}} className="d-flex flex-column">
+        <div style={{width: 250, paddingTop: ".75rem"}} className="d-flex flex-column">
             <Tab.Container activeKey={activeKey} onSelect={setActiveKey}>
                 <Nav variant="tabs" className="justify-content-center">
                     <Nav.Item>
@@ -30,7 +30,7 @@ export default function Sidebar({ id }) {
                         <Nav.Link eventKey={CONTACTS_KEY}>Contacts</Nav.Link>
                     </Nav.Item>
                 </Nav>
-                <Tab.Content className="border-right overflow-auto flex-grow-1">
+                <Tab.Content className="border-right border-left overflow-auto flex-grow-1">
                     <Tab.Pane eventKey={CONVERSATIONS_KEY}>
                         <Conversations />
                     </Tab.Pane>
